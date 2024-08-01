@@ -6,7 +6,6 @@
     height: 200px; /* Высота карточки товара */
     position: relative; /* Для позиционирования подложки */
     box-sizing: border-box;
-
 }
 
 /* Стиль для подложки */
@@ -20,8 +19,6 @@
     left: 0; /* Расположить подложку по левому краю карточки */
     z-index: -1; /* Убедиться, что подложка находится за карточкой товара */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легкая тень для глубины */
-    border: 2px solid transparent;
-    border-radius: 6px;
 }
 
 /* Стили для изображения */
@@ -34,17 +31,15 @@
     align-items: center;
     justify-content: center;
     overflow: hidden; /* Обрезка изображения, выходящего за пределы контейнера */
+    border-radius: 10px; /* Скругленные углы для контейнера изображения */
     cursor: pointer; /* Указываем, что изображение кликабельно */
-    border: 2px solid transparent;
-    border-radius: 6px;
 }
 
 .img img {
     width: 100%;
     height: auto; /* Высота авто для сохранения пропорций изображения */
     object-fit: cover; /* Обрезка изображения по контейнеру */
-    border: 2px solid transparent;
-    border-radius: 6px;
+    border-radius: 10px; /* Скругленные углы для самого изображения */
 }
 
 /* Стили для описания и кнопки */
