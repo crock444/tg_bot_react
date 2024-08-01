@@ -6,13 +6,13 @@ import {useCallback, useEffect} from "react";
 
 const products = [
     {id: '1', title: 'Джинсы', price: 5000, description: 'Синего цвета, прямые', imageUrl: 'https://huarache-shop.ru/800/600/https/static.tildacdn.com/tild6437-3862-4530-b164-396231376362/kurtka.png'},
-    {id: '2', title: 'Куртка', price: 12000, description: 'Зеленого цвета, теплая'},
-    {id: '3', title: 'Джинсы 2', price: 5000, description: 'Синего цвета, прямые'},
-    {id: '4', title: 'Куртка 8', price: 122, description: 'Зеленого цвета, теплая'},
-    {id: '5', title: 'Джинсы 3', price: 5000, description: 'Синего цвета, прямые'},
-    {id: '6', title: 'Куртка 7', price: 600, description: 'Зеленого цвета, теплая'},
-    {id: '7', title: 'Джинсы 4', price: 5500, description: 'Синего цвета, прямые'},
-    {id: '8', title: 'Куртка 5', price: 12000, description: 'Зеленого цвета, теплая'},
+    {id: '2', title: 'Куртка', price: 12000, description: 'Зеленого цвета, теплая', imageUrl:'https://avatars.mds.yandex.net/i?id=93bd95f7552f26055c1a44ac9cf24ab1_l-4884623-images-thumbs&n=13'},
+    {id: '3', title: 'Джинсы 2', price: 5000, description: 'Синего цвета, прямые', imageUrl:'https://cdn1.ozone.ru/multimedia/1022652479.jpg'},
+    {id: '4', title: 'Куртка 8', price: 122, description: 'Зеленого цвета, теплая', imageUrl:'https://podwal.ru/upload/iblock/16a/16a577009096b5ff064e188da880fd90.png'},
+    {id: '5', title: 'Джинсы 3', price: 5000, description: 'Синего цвета, прямые', imageUrl:'https://cdn1.ozone.ru/s3/multimedia-6/6007479582.jpg'},
+    {id: '6', title: 'Куртка 7', price: 600, description: 'Зеленого цвета, теплая', imageUrl:'https://nazya.com/anyimage/img.alicdn.com/imgextra/i4/TB1b21wJpXXXXXxaXXXXXXXXXXX_!!0-item_pic.jpg'},
+    {id: '7', title: 'Джинсы 4', price: 5500, description: 'Синего цвета, прямые', imageUrl:'https://images.2moodstore.com/upload/iblock/a44/0jj4kz7fr534gmuxqgwsj0g274asjh1i.jpg?img_type=pmain'},
+    {id: '8', title: 'Куртка 5', price: 12000, description: 'Зеленого цвета, теплая', imageUrl:'https://img.joomcdn.net/00820917ca1b83014da7f7817324ff1545ee7433_original.jpeg'},
 ]
 
 const getTotalPrice = (items = []) => {
