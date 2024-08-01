@@ -1,38 +1,41 @@
 .product {
     display: flex;
     flex-direction: column;
-    border: 1px solid var(--tg-theme-button-color);
     padding: 15px;
-    width: 170px;
-    box-sizing: border-box; /* Чтобы паддинг и границы учитывались в размере */
+    width: 170px; /* Установите ширину в соответствии с вашим дизайном */
+    height: 200px; /* Установите высоту в соответствии с вашим дизайном */
+    position: relative; /* Для позиционирования подложки */
+    box-sizing: border-box;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block; /* Убедиться, что изображение занимает всю ширину контейнера */
 }
 
 .img {
     width: 100%;
-    height: 100px;
+    height: 100px; /* Высота изображения */
+    background: lightgray;
     margin: 0 auto;
-    background: lightgray; /* Цвет фона для случая, если изображение не загрузится */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden; /* Обрезаем изображение, если оно превышает контейнер */
-    cursor: pointer; /* Указываем, что изображение кликабельно */
 }
 
 .img img {
-    width: 100%; /* Изображение растягивается на всю ширину контейнера */
-    height: auto; /* Высота автоматическая, чтобы сохранить пропорции */
-    object-fit: cover; /* Обрезка изображения для заполнения контейнера */
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
 .description {
     font-size: 0.8em;
-    margin-top: 10px; /* Добавляем отступ сверху для визуального разделения */
+    margin-top: 10px;
 }
 
 .add-btn {
     width: 100%;
-    margin-top: 10px; /* Добавляем отступ сверху для визуального разделения */
+    margin-top: 10px;
 }
 
 /* Стили для модального окна */
@@ -46,7 +49,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 1000; /* Убедитесь, что модальное окно поверх всех других элементов */
+    z-index: 1000;
 }
 
 .modal-content {
@@ -55,7 +58,7 @@
     padding: 20px;
     max-width: 90%;
     max-height: 90%;
-    overflow: hidden; /* Обрезаем содержимое, если оно выходит за границы */
+    overflow: hidden;
 }
 
 .modal-image {
@@ -73,3 +76,14 @@
     padding: 5px 10px;
     cursor: pointer;
 }
+.shapewithtext {
+    position: absolute;
+    background-color: #c69bff;
+    height: 100%; /* Высота подложки равна высоте карточки */
+    width: 100%; /* Ширина подложки равна ширине карточки */
+    top: 0; /* Расположить подложку по верхнему краю карточки */
+    left: 0; /* Расположить подложку по левому краю карточки */
+    z-index: -1; /* Убедиться, что подложка находится за карточкой товара */
+    /* Если нужно, добавьте границы или другие стили */
+}
+
