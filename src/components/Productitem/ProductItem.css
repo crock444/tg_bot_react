@@ -6,6 +6,8 @@
     height: 200px; /* Высота карточки товара */
     position: relative; /* Для позиционирования подложки */
     box-sizing: border-box;
+    border: 2px solid transparent;
+    border-radius: 6px;
 }
 
 /* Стиль для подложки */
