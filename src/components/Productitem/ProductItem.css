@@ -7,7 +7,31 @@
     position: relative; /* Для позиционирования подложки */
     box-sizing: border-box;
 }
+.add-btn {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    background: transparent; /* Убираем фон, чтобы была видна подложка */
+    color: #000; /* Цвет текста на кнопке */
+    font-size: 1em;
+    text-align: center;
+    cursor: pointer;
+    z-index: 1; /* Убедиться, что кнопка находится выше подложки */
+}
 
+/* Подложка под кнопкой */
+.add-btn-background {
+    position: absolute;
+    background-color: #000; /* Черный цвет подложки */
+    border-radius: 10px; /* Скругленные углы подложки */
+    height: 100%; /* Высота подложки равна высоте кнопки */
+    width: 100%; /* Ширина подложки равна ширине кнопки */
+    top: 0; /* Расположить подложку по верхнему краю кнопки */
+    left: 0; /* Расположить подложку по левому краю кнопки */
+    z-index: -1; /* Убедиться, что подложка находится за кнопкой */
+}
 /* Стиль для подложки */
 .shapewithtext {
     position: absolute;
