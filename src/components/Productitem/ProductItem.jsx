@@ -19,6 +19,9 @@ const ProductItem = ({ product, className, onAdd }) => {
 
     return (
         <div className={`product ${className}`}>
+            {/* Подложка */}
+            <div className="shapewithtext"></div>
+
             <div className={'img'} onDoubleClick={openModal}>
                 <img src={product.imageUrl} alt={product.title} />
             </div>

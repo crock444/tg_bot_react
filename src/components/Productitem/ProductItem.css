@@ -3,7 +3,7 @@
     flex-direction: column;
     border: 1px solid var(--tg-theme-button-color);
     padding: 15px;
-    width: 500px;
+    width: 170px;
     box-sizing: border-box;
 }
 
@@ -72,5 +72,16 @@
     border: none;
     padding: 5px 10px;
     cursor: pointer;
+}
+.shapewithtext {
+    position: absolute;
+    background-color: #c69bff;
+    height: 448px;
+    width: 341.333px;
+    top: 100%; /* Располагаем подложку под карточкой товара */
+    left: 50%;
+    transform: translateX(-50%); /* Центрируем подложку по горизонтали относительно карточки */
+    z-index: -1; /* Размещаем подложку позади карточки товара */
+    /* Если нужно, добавьте отступы или границы */
 }
 
