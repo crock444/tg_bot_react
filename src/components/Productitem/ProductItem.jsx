@@ -48,3 +48,4 @@ const ProductItem = ({ product, className, onAdd }) => {
 };
 
 export default ProductItem;
+

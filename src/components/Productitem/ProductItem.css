@@ -2,31 +2,45 @@
     display: flex;
     flex-direction: column;
     padding: 15px;
-    width: 170px; /* Установите ширину в соответствии с вашим дизайном */
-    height: 200px; /* Установите высоту в соответствии с вашим дизайном */
+    width: 170px; /* Ширина карточки товара */
+    height: 200px; /* Высота карточки товара */
     position: relative; /* Для позиционирования подложки */
     box-sizing: border-box;
 }
 
+/* Стиль для подложки */
+.shapewithtext {
+    position: absolute;
+    background-color: #c69bff; /* светло-фиолетовый цвет */
+    border-radius: 10px; /* скругленные углы */
+    height: 100%; /* Высота подложки равна высоте карточки */
+    width: 100%; /* Ширина подложки равна ширине карточки */
+    top: 0; /* Расположить подложку по верхнему краю карточки */
+    left: 0; /* Расположить подложку по левому краю карточки */
+    z-index: -1; /* Убедиться, что подложка находится за карточкой товара */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легкая тень для глубины */
+}
 
+/* Стили для изображения */
 .img {
     width: 100%;
-    height: 100px;
+    height: 100px; /* Высота изображения */
     margin: 0 auto;
-    background: lightgray;
+    background: lightgray; /* Фоновый цвет, если изображение не загружено */
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
+    overflow: hidden; /* Обрезка изображения, выходящего за пределы контейнера */
     cursor: pointer; /* Указываем, что изображение кликабельно */
 }
 
 .img img {
     width: 100%;
-    height: auto;
-    object-fit: cover;
+    height: auto; /* Высота авто для сохранения пропорций изображения */
+    object-fit: cover; /* Обрезка изображения по контейнеру */
 }
 
+/* Стили для описания и кнопки */
 .description {
     font-size: 0.8em;
     margin-top: 10px;
@@ -75,14 +89,3 @@
     padding: 5px 10px;
     cursor: pointer;
 }
-.shapewithtext {
-    position: absolute;
-    background-color: #c69bff;
-    height: 100%; /* Высота подложки равна высоте карточки */
-    width: 100%; /* Ширина подложки равна ширине карточки */
-    top: 0; /* Расположить подложку по верхнему краю карточки */
-    left: 0; /* Расположить подложку по левому краю карточки */
-    z-index: -1; /* Убедиться, что подложка находится за карточкой товара */
-    /* Если нужно, добавьте границы или другие стили */
-}
-
