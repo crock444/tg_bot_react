@@ -30,6 +30,10 @@ const ProductItem = ({ product, className, onAdd }) => {
             <div className={'price'}>
                 <span>Стоимость: <b>{product.price}</b></span>
             </div>
+
+            {/* Подложка под кнопкой */}
+            <div className="add-btn-background"></div>
+
             <Button className={'add-btn'} onClick={onAddHandler}>
                 Добавить в корзину
             </Button>
@@ -48,4 +52,3 @@ const ProductItem = ({ product, className, onAdd }) => {
 };
 
 export default ProductItem;
-
