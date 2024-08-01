@@ -4,21 +4,32 @@
     border: 1px solid var(--tg-theme-button-color);
     padding: 15px;
     width: 170px;
+    box-sizing: border-box; /* Чтобы паддинг и границы учитывались в размере */
 }
-
 
 .img {
     width: 100%;
-    background: lightgray;
     height: 100px;
     margin: 0 auto;
-    background: var(--tg-theme-button-color);
+    background: lightgray; /* Цвет фона для случая, если изображение не загрузится */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Обрезаем изображение, если оно превышает контейнер */
+}
+
+.img img {
+    width: 100%; /* Изображение растягивается на всю ширину контейнера */
+    height: auto; /* Высота автоматическая, чтобы сохранить пропорции */
+    object-fit: cover; /* Обрезка изображения для заполнения контейнера */
 }
 
 .description {
     font-size: 0.8em;
+    margin-top: 10px; /* Добавляем отступ сверху для визуального разделения */
 }
 
 .add-btn {
     width: 100%;
+    margin-top: 10px; /* Добавляем отступ сверху для визуального разделения */
 }
