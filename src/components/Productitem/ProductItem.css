@@ -76,8 +76,8 @@
 .shapewithtext {
     position: absolute;
     background-color: #c69bff;
-    height: 448px;
-    width: 341.333px;
+    height: 50px;
+    width: 100px;
     top: 100%; /* Располагаем подложку под карточкой товара */
     left: 50%;
     transform: translateX(-50%); /* Центрируем подложку по горизонтали относительно карточки */
