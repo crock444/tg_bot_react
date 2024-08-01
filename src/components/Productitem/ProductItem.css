@@ -6,8 +6,7 @@
     height: 200px; /* Высота карточки товара */
     position: relative; /* Для позиционирования подложки */
     box-sizing: border-box;
-    border: 2px solid transparent;
-    border-radius: 6px;
+
 }
 
 /* Стиль для подложки */
@@ -36,12 +35,16 @@
     justify-content: center;
     overflow: hidden; /* Обрезка изображения, выходящего за пределы контейнера */
     cursor: pointer; /* Указываем, что изображение кликабельно */
+    border: 2px solid transparent;
+    border-radius: 6px;
 }
 
 .img img {
     width: 100%;
     height: auto; /* Высота авто для сохранения пропорций изображения */
     object-fit: cover; /* Обрезка изображения по контейнеру */
+    border: 2px solid transparent;
+    border-radius: 6px;
 }
 
 /* Стили для описания и кнопки */
