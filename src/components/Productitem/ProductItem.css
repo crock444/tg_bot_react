@@ -4,32 +4,21 @@
     border: 1px solid var(--tg-theme-button-color);
     padding: 15px;
     width: 170px;
-    box-sizing: border-box; /* Чтобы паддинг и границы учитывались в размере */
 }
+
 
 .img {
     width: 100%;
+    background: lightgray;
     height: 100px;
     margin: 0 auto;
-    background: lightgray; /* Используем фоновый цвет как резервный */
-    display: flex; /* Используем flexbox для центрирования изображения */
-    align-items: center;
-    justify-content: center;
-    overflow: hidden; /* Обрезаем изображение, если оно выходит за границы */
-}
-
-.img img {
-    width: 100%; /* Устанавливаем ширину изображения */
-    height: auto; /* Поддерживаем пропорции изображения */
-    object-fit: cover; /* Обрезаем изображение, чтобы заполнить контейнер */
+    background: var(--tg-theme-button-color);
 }
 
 .description {
     font-size: 0.8em;
-    margin-top: 10px; /* Добавляем отступ сверху для разделения от предыдущего элемента */
 }
 
 .add-btn {
     width: 100%;
-    margin-top: 10px; /* Добавляем отступ сверху для разделения от предыдущего элемента */
 }
