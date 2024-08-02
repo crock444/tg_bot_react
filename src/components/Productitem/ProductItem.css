@@ -58,7 +58,7 @@
     font-size: 0.9em; /* Размер шрифта */
     font-family: Lora, serif; /* Шрифт */
     color: #333; /* Цвет текста */
-    background: #000000; /* Цвет фона */
+    background: #e0e0e0; /* Цвет фона */
     border: 2px solid #333; /* Граница кнопки */
     border-radius: 5px; /* Скругленные углы */
     text-align: center; /* Выравнивание текста по центру */
