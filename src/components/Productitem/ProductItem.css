@@ -6,6 +6,7 @@
     height: 200px; /* Высота карточки товара */
     position: relative; /* Для позиционирования подложки */
     box-sizing: border-box;
+    font-family: Lora, serif; /* Установка шрифта для текста внутри карточки товара */
 }
 
 /* Стиль для подложки */
@@ -31,14 +32,15 @@
     align-items: center;
     justify-content: center;
     overflow: hidden; /* Обрезка изображения, выходящего за пределы контейнера */
-    cursor: pointer; /* Указываем, что изображение кликабельно */
     border-radius: 10px; /* Скругленные углы изображения */
+    position: relative; /* Для размещения изображения внутри контейнера */
 }
 
+/* Обеспечим, чтобы изображение занимало весь контейнер и корректно обрезалось */
 .img img {
     width: 100%;
-    height: auto; /* Высота авто для сохранения пропорций изображения */
-    object-fit: cover; /* Обрезка изображения по контейнеру */
+    height: 100%;
+    object-fit: cover; /* Обеспечивает, чтобы изображение заполняло контейнер, сохраняя пропорции */
     border-radius: 10px; /* Скругленные углы изображения */
 }
 
@@ -46,6 +48,7 @@
 .description {
     font-size: 0.8em;
     margin-top: 10px;
+    font-family: Lora, serif; /* Установка шрифта для описания */
 }
 
 .add-btn {
@@ -54,7 +57,7 @@
     position: relative;
     z-index: 1; /* Убедиться, что кнопка находится выше подложки */
     color: white;
-    font-family: Lora, serif;
+    font-family: Lora, serif; /* Установка шрифта для кнопки */
 }
 
 /* Подложка под кнопкой */
@@ -91,6 +94,7 @@
     max-width: 90%;
     max-height: 90%;
     overflow: hidden;
+    font-family: Lora, serif; /* Установка шрифта для текста внутри модального окна */
 }
 
 .modal-image {
@@ -107,4 +111,5 @@
     border: none;
     padding: 5px 10px;
     cursor: pointer;
+    font-family: Lora, serif; /* Установка шрифта для кнопки закрытия модального окна */
 }
