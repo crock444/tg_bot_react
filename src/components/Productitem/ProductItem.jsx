@@ -32,7 +32,7 @@ const ProductItem = ({ product, className, onAdd }) => {
             </div>
 
             {/* Подложка под кнопкой */}
-            <div className="shapewithtext"></div>
+            <div className="add-btn-background"></div>
 
             <Button className={'add-btn'} onClick={onAddHandler}>
                 Добавить в корзину
