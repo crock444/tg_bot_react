@@ -54,6 +54,7 @@
     position: relative;
     z-index: 1; /* Убедиться, что кнопка находится выше подложки */
     color: white;
+    font-family: Lora, serif;
 }
 
 /* Подложка под кнопкой */
