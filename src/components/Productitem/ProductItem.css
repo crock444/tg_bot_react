@@ -57,7 +57,7 @@
     margin-top: 10px;
     position: relative;
     z-index: 2; /* Убедиться, что кнопка находится выше всех подложек */
-    color: white;
+    color: #000000;
     font-family: Lora, serif; /* Установка шрифта для кнопки */
 }
 
