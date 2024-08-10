@@ -22,7 +22,7 @@
 }
 
 .shapewithtext.animate-shadow {
-    animation: shadowPulse 0,5s ease-in-out;
+    animation: shadowPulse 0.5s ease-in-out;
 }
 
 /* Стиль для фиолетовой подложки */
