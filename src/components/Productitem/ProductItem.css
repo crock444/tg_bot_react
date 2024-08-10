@@ -9,10 +9,26 @@
     font-family: Lora, serif; /* Установка шрифта для текста внутри карточки товара */
 }
 
+@keyframes shadowPulse {
+    0% {
+        box-shadow: 0 0 0 rgba(80, 122, 171, 0.7);
+    }
+    50% {
+        box-shadow: 0 0 15px rgba(80, 122, 171, 0.7);
+    }
+    100% {
+        box-shadow: 0 0 0 rgba(80, 122, 171, 0.7);
+    }
+}
+
+.shapewithtext.animate-shadow {
+    animation: shadowPulse 1s ease-in-out;
+}
+
 /* Стиль для фиолетовой подложки */
 .shapewithtext {
     position: absolute;
-    background-color: #ff4900; /* светло-фиолетовый цвет */
+    background-color: #507aab; /* светло-фиолетовый цвет */
     border-radius: 10px; /* скругленные углы */
     height: 100%; /* Высота подложки равна высоте карточки */
     width: 100%; /* Ширина подложки равна ширине карточки */

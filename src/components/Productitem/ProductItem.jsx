@@ -4,9 +4,12 @@ import './ProductItem.css';
 
 const ProductItem = ({ product, className, onAdd }) => {
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isAnimating, setIsAnimating] = useState(false);
 
     const onAddHandler = () => {
         onAdd(product);
+        setIsAnimating(true);
+        setTimeout(() => setIsAnimating(false), 1000); // Длительность анимации
     };
 
     const openModal = () => {
@@ -20,7 +23,7 @@ const ProductItem = ({ product, className, onAdd }) => {
     return (
         <div className={`product ${className}`}>
             {/* Подложка */}
-            <div className="shapewithtext"></div>
+            <div className={`shapewithtext ${isAnimating ? 'animate-shadow' : ''}`}></div>
 
             <div className={'img'} onDoubleClick={openModal}>
                 <img src={product.imageUrl} alt={product.title} />
@@ -31,14 +34,9 @@ const ProductItem = ({ product, className, onAdd }) => {
                 <span>Стоимость: <b>{product.price} руб</b></span>
             </div>
 
-            {/* Подложка под кнопкой */}
-
-
             <Button className={'add-btn'} onClick={onAddHandler}>
                 Добавить в корзину
             </Button>
-
-
 
             {/* Модальное окно */}
             {isModalOpen && (
