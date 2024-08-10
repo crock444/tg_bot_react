@@ -58,6 +58,7 @@
     position: relative;
     z-index: 2; /* Убедиться, что кнопка находится выше всех подложек */
     color: #000000;
+    background-color: black;
     font-family: Lora, serif; /* Установка шрифта для кнопки */
 }
 
