@@ -38,6 +38,8 @@ const ProductItem = ({ product, className, onAdd }) => {
                 Добавить в корзину
             </Button>
 
+
+
             {/* Модальное окно */}
             {isModalOpen && (
                 <div className="modal-overlay" onClick={closeModal}>
