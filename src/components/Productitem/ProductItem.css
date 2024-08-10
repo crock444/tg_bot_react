@@ -57,10 +57,16 @@
     margin-top: 10px;
     position: relative;
     z-index: 2; /* Убедиться, что кнопка находится выше всех подложек */
-    color: #000000;
-    background-color: black;
+    color: #ffffff; /* Белый цвет текста */
+    background-color: #000000; /* Черный цвет фона */
+    border: none; /* Убираем стандартные границы кнопки */
+    border-radius: 10px; /* Скругленные углы кнопки */
+    padding: 10px; /* Отступы внутри кнопки */
     font-family: Lora, serif; /* Установка шрифта для кнопки */
+    cursor: pointer; /* Указатель, чтобы показать, что кнопка кликабельна */
+    text-align: center; /* Центрирование текста внутри кнопки */
 }
+
 
 /* Подложка под кнопкой */
 .add-btn-background {
