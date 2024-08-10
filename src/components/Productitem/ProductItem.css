@@ -58,7 +58,7 @@
     position: relative;
     z-index: 2; /* Убедиться, что кнопка находится выше всех подложек */
     color: #ffffff; /* Белый цвет текста */
-    background-color: #ec0000; /* Черный цвет фона */
+    background-color: #000000; /* Черный цвет фона */
     border: none; /* Убираем стандартные границы кнопки */
     border-radius: 10px; /* Скругленные углы кнопки */
     padding: 10px; /* Отступы внутри кнопки */
@@ -89,7 +89,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(255, 255, 255, 0.8);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -98,7 +98,7 @@
 
 .modal-content {
     position: relative;
-    background: #000000;
+    background: #ffffff;
     padding: 20px;
     max-width: 90%;
     max-height: 90%;
