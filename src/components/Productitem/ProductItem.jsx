@@ -1,43 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Button from "../Button/Button";
 import './ProductItem.css';
 
+
 const ProductItem = ({ product, className, onAdd }) => {
-    const redirectToPayment = () => {
-        // Параметры для отправки на страницу оплаты
-        const amount = product.price; // Сумма платежа
-        const paymentUrl = 'https://example.com/payment'; // URL для отправки платежа (замените на реальный URL)
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isAnimating, setIsAnimating] = useState(false);
 
-        // Создаем форму
-        const form = document.createElement('form');
-        form.method = 'POST';
-        form.action = paymentUrl;
+    const onAddHandler = () => {
+        onAdd(product);
+        setIsAnimating(true);
+        setTimeout(() => setIsAnimating(false), 1000); // Длительность анимации
+    };
 
-        // Добавляем скрытое поле с суммой
-        const amountField = document.createElement('input');
-        amountField.type = 'hidden';
-        amountField.name = 'amount';
-        amountField.value = amount;
-        form.appendChild(amountField);
+    const openModal = () => {
+        setIsModalOpen(true);
+    };
 
-        // Добавляем другие необходимые поля (например, id товара, описание и т.д.)
-        const itemIdField = document.createElement('input');
-        itemIdField.type = 'hidden';
-        itemIdField.name = 'item_id';
-        itemIdField.value = product.id; // Пример значения
-        form.appendChild(itemIdField);
-
-        // Добавляем форму в DOM и отправляем ее
-        document.body.appendChild(form);
-        form.submit();
+    const closeModal = () => {
+        setIsModalOpen(false);
     };
 
     return (
         <div className={`product ${className}`}>
             {/* Подложка */}
-            <div className="shapewithtext"></div>
+            <div className={`shapewithtext ${isAnimating ? 'animate-shadow' : ''}`}></div>
 
-            <div className={'img'} onDoubleClick={() => { /* Открытие модального окна */ }}>
+            <div className={'img'} onDoubleClick={openModal}>
                 <img src={product.imageUrl} alt={product.title} />
             </div>
             <div className={'title'}>{product.title}</div>
@@ -46,16 +35,16 @@ const ProductItem = ({ product, className, onAdd }) => {
                 <span>Стоимость: <b>{product.price} руб</b></span>
             </div>
 
-            <Button className={'add-btn'} onClick={redirectToPayment}>
-                Купить
+            <Button className={'add-btn'} onClick={onAddHandler}>
+                Добавить в корзину
             </Button>
 
             {/* Модальное окно */}
-            {false && ( // Замените на состояние модального окна
-                <div className="modal-overlay">
-                    <div className="modal-content">
+            {isModalOpen && (
+                <div className="modal-overlay" onClick={closeModal}>
+                    <div className="modal-content" onClick={e => e.stopPropagation()}>
                         <img src={product.imageUrl} alt={product.title} className="modal-image" />
-                        <button className="modal-close">Закрыть</button>
+                        <button className="modal-close" onClick={closeModal}>Закрыть</button>
                     </div>
                 </div>
             )}
@@ -64,5 +53,4 @@ const ProductItem = ({ product, className, onAdd }) => {
 };
 
 export default ProductItem;
-
 
